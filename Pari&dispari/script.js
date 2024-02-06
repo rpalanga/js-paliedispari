@@ -44,14 +44,14 @@ function check (sumElement) {
 
 // scelta utente
 let userChoice; 
-console.log("scelta dell'utente"+ userChoice)
+// console.log("scelta dell'utente"+ userChoice)
 
 // scelta randomica computer
 let pcChoice = pcNumber();
 console.log("Scelta computer" + pcChoice)
 
 // valutere se la somma degli elementi è pari o dispari
-let Result = check (sumElement);
+let Result = check ();
 
 // pari o dispari
 let DorP ;
@@ -76,6 +76,10 @@ do {
     
 } while (errorCicle !== false )
 
+console.log("scelta dell'utente"+ userChoice)
+
+
+
 // somma degli elementi 
 let sumElement = add(pcChoice, userChoice);
 console.log( "questa è la somma" + sumElement)
@@ -94,6 +98,16 @@ while  (!(DorP === "pari" || DorP === "dispari"))  {
 }
 
 console.log(DorP)
+
+
+if (Result === DorP){
+    console.log("l'utente ha vinto")
+
+} else {
+    console.log("l'utente ha perso")
+
+}
+
 
 
 
