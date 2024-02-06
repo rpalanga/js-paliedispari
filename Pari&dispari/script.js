@@ -12,37 +12,44 @@
 // Se l'utente ha indovinato l'esito (pari o dispari) della somma ha vinto, altrimenti ha perso.
 
 
-let userChoice ;
+let userChoice; 
+let eRRor = false;
 
-function userNumber (Numero){
-    
-    if (Numero % 2 == 0){
+do {
 
-        return "pari";
+    userChoice = Number(prompt("Inserisci un numero da 1 a 5")) ;
+
+    if (userChoice < 1 || userChoice > 5) {
+
+        alert("Inserisci un altro Numero");
+
     } else {
 
-        return "dispari";
+        eRRor = true;
+        
+
     }
 
-}
-console.log(Numero())
+    
+    
+} while (eRRor !== true )
 
-function pcNumber (Numerodue){
+
+
+function pcNumber (){
 
     let randomNumber = Math.floor(Math.random()* 5) + 1;
     
-    if (Numerodue % 2 == 0){
 
-        return "pari";
-
-    } else {
-
-        return "dispari"
-    }
+    return randomNumber;
 
 }
 
-console.log(Numerodue())
+
+let pcChoice = pcNumber()
+
+// console.log(pcChoice)
+
 
 
 
